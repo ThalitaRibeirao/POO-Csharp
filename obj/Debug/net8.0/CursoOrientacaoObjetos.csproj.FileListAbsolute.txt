@@ -1,0 +1,14 @@
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\bin\Debug\net8.0\CursoOrientacaoObjetos.exe
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\bin\Debug\net8.0\CursoOrientacaoObjetos.deps.json
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\bin\Debug\net8.0\CursoOrientacaoObjetos.runtimeconfig.json
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\bin\Debug\net8.0\CursoOrientacaoObjetos.dll
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\bin\Debug\net8.0\CursoOrientacaoObjetos.pdb
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\obj\Debug\net8.0\CursoOrientacaoObjetos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\obj\Debug\net8.0\CursoOrientacaoObjetos.AssemblyInfoInputs.cache
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\obj\Debug\net8.0\CursoOrientacaoObjetos.AssemblyInfo.cs
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\obj\Debug\net8.0\CursoOrientacaoObjetos.csproj.CoreCompileInputs.cache
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\obj\Debug\net8.0\CursoOrientacaoObjetos.dll
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\obj\Debug\net8.0\refint\CursoOrientacaoObjetos.dll
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\obj\Debug\net8.0\CursoOrientacaoObjetos.pdb
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\obj\Debug\net8.0\CursoOrientacaoObjetos.genruntimeconfig.cache
+C:\Users\thaly\OneDrive\Imagens\Área de Trabalho\Study\csharp\CursoOrientacaoObjetos\obj\Debug\net8.0\ref\CursoOrientacaoObjetos.dll
