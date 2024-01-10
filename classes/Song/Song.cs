@@ -2,6 +2,7 @@
 {
     public string Title { get; set; }
     public string Artist { get; set; }
+    public Band band = new Band();
     public string Album { get; set; }
     private int duration = 0;
     public int Duration { 

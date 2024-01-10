@@ -4,47 +4,43 @@ class Album
 {
     public string title;
     public string artist;
+    public Band band = new Band();
     public List<Song> songs = new List<Song>();
     public int duration;  
     public List<Gender> genders = new List<Gender>();
     public List<string> gendersString = new List<string>();
-
+    
+    
     public Album()
     {
-        duration = songs.Sum(s => s.Duration);
-        foreach(Song s in songs)
-        {
-            foreach (Gender g in s.genders)
-            {
-                if (!genders.Contains(g))
-                {
-                    genders.Add(g);
-                }
-            }
-        }
-
-        genders.ForEach(g => gendersString.Add(g.title));
+        duration = songs.Sum(song => song.Duration);
+        foreach(Song song in songs) AddNewGender(song);
     }
 
+    // Checking if gender hasn't been added
+    public void AddNewGender(Song song)
+    {
+        foreach (Gender gender in song.genders)
+        {
+            if (!genders.Contains(gender))
+            {
+                genders.Add(gender);
+                gendersString.Add(gender.title);
+            }
+        }
+    }
+    
     public void AddNewSong(Song song)
     {
         songs.Add(song);
         duration += song.Duration;
-        foreach (Gender g in song.genders)
-        {
-            if (!genders.Contains(g))
-            {
-                genders.Add(g);
-                gendersString.Add(g.title);
-            }
-        }
+        AddNewGender(song);
     }
 
     public void ShowInfo()
     {
         Console.WriteLine($"Album '{title}, made by {artist}'");
         Console.Write($"Genders: {string.Join(", ", gendersString)}");
-        
         
         Console.WriteLine($"\nDuration: {duration}s");
         for (int i = 0; i < songs.Count; i++)
