@@ -1,12 +1,13 @@
 ﻿class Gender
 {
-    public string Title { get; set; }
-
-    public Gender(string genderTitle = "")
+    public Gender(string titleGender)
     {
-        if (genderTitle != "")
-        {
-            Title = genderTitle;
-        }
+        title = titleGender;
+    }
+
+    private string title;
+    public string Title
+    {
+        get => title;
     }
 }

@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\classes",
+    "\\classes\\Gaming",
     "\\classes\\Restaurant",
     "\\classes\\School",
     "\\classes\\Song"
   ],
-  "SelectedNode": "\\CursoOrientacaoObjetos.sln",
+  "SelectedNode": "\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

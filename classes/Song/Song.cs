@@ -1,9 +1,16 @@
 ﻿class Song
 {
-    public string Title { get; set; }
-    public string Artist { get; set; }
-    public Band band = new Band();
-    public string Album { get; set; }
+    public Song(string titleSong, Band artistSong)
+    {
+        title = titleSong;
+        artist = artistSong;
+    }
+
+    private string title;
+    public string Title { get => title; }
+    private Band artist;
+    public Band Artist { get => artist; }
+    public Album Album { get; set; }
     private int duration = 0;
     public int Duration { 
         get => duration;
@@ -12,22 +19,13 @@
     public bool Available { get; set; }
     public List<Gender> genders = new List<Gender>();
 
-    public string Owner
-    {
-        get
-        {
-            if (Artist.Length == 0) return band.Name;
-            else return Artist;
-        }
-    }
-
     // Only-read propertie (lambda function)
-    public string Description => $"The song {Title} belongs to {Owner}";
+    public string Description => $"The song {Title} belongs to {Artist.Name}";
 
     public void ShowInfo(bool shortInfo=false)
     {
         Console.WriteLine($"Title: {Title}");
-        Console.WriteLine($"Artist/Band: {Owner}");
+        Console.WriteLine($"Artist/Band: {Artist.Name}");
         if (!shortInfo)
         {
             Console.WriteLine($"Album: {Album}");

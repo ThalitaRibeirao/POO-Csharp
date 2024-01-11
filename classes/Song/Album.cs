@@ -1,37 +1,24 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using System.Reflection;
+using System.Reflection.Metadata.Ecma335;
 
 class Album
 {
-    public string Title { get; set; }
-    public string Artist { get; set; }
-    public Band band = new Band();
-    public List<Song> songs = new List<Song>();
-    private int duration { get; set; }
-
-    public int Duration
+    public Album (string titleAlbum, Band artistAlbum)
     {
-        get
-        {
-            return duration;
-        }
-    }  
+        artist = artistAlbum;
+        title = titleAlbum;
+        duration = songs.Sum(song => song.Duration);
+        foreach (Song song in songs) AddNewGender(song);
+    }
+    private string title;
+    public string Title { get => title; }
+    private Band artist;
+    public Band Artist { get => artist; }
+    public List<Song> songs = new List<Song>();
+    private int duration = 0;
+    public int Duration { get => duration; }
     public List<Gender> genders = new List<Gender>();
     public List<string> gendersString = new List<string>();
-
-    public string Owner
-    {
-        get
-        {
-            if (Artist == null) return band.Name;
-            else return Artist;
-        }
-    }
-    
-    public Album()
-    {
-        duration = songs.Sum(song => song.Duration);
-        foreach(Song song in songs) AddNewGender(song);
-    }
 
     // Checking if gender hasn't been added
     public void AddNewGender(Song song)
@@ -48,9 +35,9 @@ class Album
     
     public void AddNewSong(Song song)
     {
-        if (song.Artist != Artist || song.band != band)
+        if (song.Artist != Artist)
         {
-            Console.WriteLine("The song's owner is different, please check");
+            Console.WriteLine("The song's Artist is different, please check");
         }
         else
         {
@@ -67,7 +54,7 @@ class Album
 
     public void ShowInfo()
     {
-        Console.WriteLine($"Album '{Title}', made by {Owner}");
+        Console.WriteLine($"Album '{Title}', made by {Artist.Name}");
         Console.Write($"Genders: {GetAllGenders()}");
         
         Console.WriteLine($"\nDuration: {Duration}s");

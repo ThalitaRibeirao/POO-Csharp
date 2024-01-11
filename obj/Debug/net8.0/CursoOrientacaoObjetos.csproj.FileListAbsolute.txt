@@ -35,3 +35,10 @@ C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.s
 C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.dll
 C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\refint\CursoOrientacaoObjetos.dll
 C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.pdb
+C:\Users\thaly\Study\csharp\POO-Csharp\bin\Debug\net8.0\CursoOrientacaoObjetos.exe
+C:\Users\thaly\Study\csharp\POO-Csharp\bin\Debug\net8.0\CursoOrientacaoObjetos.deps.json
+C:\Users\thaly\Study\csharp\POO-Csharp\bin\Debug\net8.0\CursoOrientacaoObjetos.runtimeconfig.json
+C:\Users\thaly\Study\csharp\POO-Csharp\bin\Debug\net8.0\CursoOrientacaoObjetos.dll
+C:\Users\thaly\Study\csharp\POO-Csharp\bin\Debug\net8.0\CursoOrientacaoObjetos.pdb
+C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.genruntimeconfig.cache
+C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\ref\CursoOrientacaoObjetos.dll

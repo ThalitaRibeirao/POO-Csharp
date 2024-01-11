@@ -1,7 +1,13 @@
 ﻿class Band
 {
-    public string Name { get; set; }
-    public List<string> artists = new List<string>();
+    // Se chama construtor
+    public Band(string nameBand)
+    {
+        name = nameBand;
+    }
+
+    private string name;
+    public string Name { get => name; }
     public List<Album> albuns = new List<Album>();
     public List<Gender> genders = new List<Gender>();
 
@@ -29,7 +35,6 @@
         foreach (Album album in albuns)
         {
             Console.WriteLine(album.Title);
-            Console.WriteLine(album.Artist);
             Console.WriteLine(album.GetAllGenders());
         }
     }

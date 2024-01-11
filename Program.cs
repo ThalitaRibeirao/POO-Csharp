@@ -1,24 +1,26 @@
-﻿Problems problems = new Problems();
-// especify problem
-problems.AlbumProblem();
+﻿// especify problem
+new Problems().GamingProblem();
 Console.ReadKey();
 
 class Problems
 {
     public void BankingProblem()
     {
-        Banking banking = new Banking();
-        banking.Name = "John Affron";
-        banking.Amount = (decimal)100.0;
+        Banking banking = new Banking()
+        {
+            Name = "John Affron", 
+            Amount = (decimal)100
+        };
 
         banking.ShowInfo();
     }
 
     public void CarProblem()
     {
-        Car car = new Car();
-
-        car.Year = 1940;
+        Car car = new Car()
+        {
+            Year = 1940
+        };
 
         Console.WriteLine(car.Year);
         Console.ReadKey();
@@ -26,12 +28,14 @@ class Problems
 
     public void SongProblem()
     {
-        Song song = new Song();
+        Band band = new Band("Beach House");
+        Album album = new Album("Depression Cherry", band);
+        Song song = new Song("Space Song", band)
+        {
+            Album = album,
+            Duration = 320
+        }; 
 
-        song.Title = "Space Song";
-        song.Artist = "Beach House";
-        song.Album = "Depression Cherry";
-        song.Duration = 320;
 
         // Working with optional values
         song.ShowInfo(true);
@@ -55,17 +59,11 @@ class Problems
     public void AlbumProblem()
     {
         // Creating the band
-        Band calypso = new Band();
-        calypso.Name = "Banda Calypso";
-        calypso.artists.Add("Joelma");
-        calypso.artists.Add("Chimbinha");
+        Band calypso = new Band("Banda Calypso");
 
         // Creating a new Album
         List<string> songsTitle = new List<string> { "A Lua Me Traiu", "Chá de Maracujá", "Acelerou", "Cavalo Manco", "Dez a Zero" };
-        Album album = new Album();
-
-        album.Title = "Ao Vivo em Recife";
-        album.band = calypso;
+        Album album = new Album("Ao Vivo em Recife", calypso);
 
         List<Gender> genders = new List<Gender>();
         genders.Add(new Gender("Pop"));
@@ -73,26 +71,25 @@ class Problems
 
         foreach (string title in songsTitle)
         {
-            Song newSong = new Song();
-            newSong.Title = title;
-            newSong.band = album.band;
-            newSong.Album = album.Title;
-            newSong.Duration = 60;
-            newSong.genders = new List<Gender>(genders);
+            Song newSong = new Song(title, calypso)
+            {
+                Album = album,
+                Duration = 60,
+                genders = genders
+            };
+
             album.AddNewSong(newSong);
         }
 
         calypso.AddAlbum(album);
-        album.ShowInfo();
+        // album.ShowInfo();
+        calypso.ShowDiscography();
     }
 
     public void AccountProblem()
     {
-        Account account = new Account();
-        account.holder.Name = "Thalita";
-        account.AccountNumber = "XXX";
-        account.Agency = "123456";
-
+        Holder holder = new Holder("Thailta", "1234", "Rua avenida da Alameda");
+        Account account = new Account(holder, "12345", "12345", (decimal)1000, (decimal)5000);
         Console.WriteLine(account.Info());
     }
 
@@ -100,13 +97,28 @@ class Problems
     {
         Stock stock = new Stock();
         List<string> products = new List<string> {"Mi Band", "Poco Mini", "Redmi Light"};
+
         foreach (string p in products)
         {
-            Product product = new Product();
-            product.Name = p;
-            product.Brand = "Xiaomi";
+            Product product = new Product()
+            {
+                Name = p,
+                Brand = "Xiaomi"
+            };
+
             stock.AddNewProduct(product);
         }
         stock.ShowProducts();
+    }
+
+    public void GamingProblem()
+    {
+        GameCatalogue catalogue = new GameCatalogue();
+
+        //catalogue.AddGame(new Game("Dead By Daylight", "Thriller", 2016));
+        //catalogue.AddGame(new Game("Overwatch 2", "FPS", 2022
+        //catalogue.AddGame(new Game("Poison Craft", "Indie", 2021));
+
+        catalogue.ShowGames();
     }
 }
