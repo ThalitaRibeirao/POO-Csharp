@@ -1,6 +1,7 @@
 ﻿class Item
 {
-    public string title;
-    public decimal price = (decimal) 0;
-    public string description;
+    public string Title { get; set; }
+    private decimal price = decimal.Zero;
+    public decimal Price { get => price; set=> price = value; }
+    public string Description { get; set; }
 }

@@ -1,4 +1,4 @@
 ﻿class Holder
 {
-    public string name;
+    public string Name { get; set; }
 }

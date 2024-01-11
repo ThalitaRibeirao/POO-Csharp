@@ -2,14 +2,30 @@
 
 class Album
 {
-    public string title;
-    public string artist;
+    public string Title { get; set; }
+    public string Artist { get; set; }
     public Band band = new Band();
     public List<Song> songs = new List<Song>();
-    public int duration;  
+    private int duration { get; set; }
+
+    public int Duration
+    {
+        get
+        {
+            return duration;
+        }
+    }  
     public List<Gender> genders = new List<Gender>();
     public List<string> gendersString = new List<string>();
-    
+
+    public string Owner
+    {
+        get
+        {
+            if (Artist == null) return band.Name;
+            else return Artist;
+        }
+    }
     
     public Album()
     {
@@ -25,24 +41,36 @@ class Album
             if (!genders.Contains(gender))
             {
                 genders.Add(gender);
-                gendersString.Add(gender.title);
+                gendersString.Add(gender.Title);
             }
         }
     }
     
     public void AddNewSong(Song song)
     {
-        songs.Add(song);
-        duration += song.Duration;
-        AddNewGender(song);
+        if (song.Artist != Artist || song.band != band)
+        {
+            Console.WriteLine("The song's owner is different, please check");
+        }
+        else
+        {
+            songs.Add(song);
+            duration += song.Duration;
+            AddNewGender(song);
+        }
+    }
+
+    public string GetAllGenders()
+    {
+        return string.Join(", ", gendersString);
     }
 
     public void ShowInfo()
     {
-        Console.WriteLine($"Album '{title}, made by {artist}'");
-        Console.Write($"Genders: {string.Join(", ", gendersString)}");
+        Console.WriteLine($"Album '{Title}', made by {Owner}");
+        Console.Write($"Genders: {GetAllGenders()}");
         
-        Console.WriteLine($"\nDuration: {duration}s");
+        Console.WriteLine($"\nDuration: {Duration}s");
         for (int i = 0; i < songs.Count; i++)
         {
             Console.WriteLine($"{i + 1} - {songs[i].Title}");

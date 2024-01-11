@@ -9,19 +9,19 @@
     }
     
     public string Description => $"The car {Model} ({Year}) is produced by {Producer}";
-    public int speed = 0;
 
-    
+    public int Speed { get; set; }
+
     public void SpeedUp()
     {
         Console.WriteLine("Speeding Up! Move away");
-        speed++;
+        Speed++;
     }
 
     public void Break()
     {
         Console.WriteLine("Breaking! Hold your seat belt");
-        speed--;
+        Speed--;
     }
 
     public void Honk()
@@ -34,7 +34,7 @@
         int option;
         while (true)
         {
-            option = int.Parse(Console.ReadLine());
+            option = int.Parse(Console.ReadLine()!);
             switch (option)
             {
                 case 0:

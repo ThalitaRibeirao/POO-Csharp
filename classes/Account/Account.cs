@@ -1,14 +1,30 @@
-﻿class Account
+﻿using System.Dynamic;
+
+class Account
 {
     public Holder holder = new Holder();
-    public string agency;
-    public string account;
-    public decimal balance = (decimal) 0;
-    public decimal limit = (decimal) 0;
+    public string Agency { get; set; }
+    public string AccountNumber { get; set; }
+    private decimal balance = (decimal)0;
+
+    public decimal Balance
+    {
+        get => balance;
+        set => balance = value;
+    }
+
+    private decimal limit = (decimal) 0;
+
+    public decimal Limit
+    {
+        get => limit;
+        set => limit = value;
+    }
+
 
     public string Info()
     {
-        string message = $"The account {agency}/{account} is holded by {holder.name}\nThere's ${balance} on balance, and limit of ${limit}.";
+        string message = $"The account {Agency}/{AccountNumber} is holded by {holder.Name}\nThere's ${Balance} on balance, and limit of ${Limit}.";
         return message;
     }
 }

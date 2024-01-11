@@ -1,5 +1,5 @@
 ﻿class Subject
 {
-    public string title;
+    public string Title { get; set; }
     public List<Student> students = new List<Student>();
 }

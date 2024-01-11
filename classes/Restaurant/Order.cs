@@ -1,11 +1,17 @@
 ﻿class Order
 {
     public List<Item> itens = new List<Item>();
-    public decimal value;
-    public int table;
+    public decimal Value { get; set; }
+    public int TableNumber { get; set; }
 
     public Order()
     {
-        value = itens.Sum(i => i.price);
+        Value = itens.Sum(i => i.Price);
+    }
+
+    public void addItem(Item item)
+    {
+        itens.Add(item);
+        Value += item.Price;
     }
 }

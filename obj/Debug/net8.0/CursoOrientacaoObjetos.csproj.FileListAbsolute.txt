@@ -27,3 +27,11 @@ C:\Users\thaly\OneDrive\Área de Trabalho\Study\csharp\POO-Csharp\obj\Debug\net8
 C:\Users\thaly\OneDrive\Área de Trabalho\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.pdb
 C:\Users\thaly\OneDrive\Área de Trabalho\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.genruntimeconfig.cache
 C:\Users\thaly\OneDrive\Área de Trabalho\Study\csharp\POO-Csharp\obj\Debug\net8.0\ref\CursoOrientacaoObjetos.dll
+C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.AssemblyInfoInputs.cache
+C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.AssemblyInfo.cs
+C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.csproj.CoreCompileInputs.cache
+C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.sourcelink.json
+C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.dll
+C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\refint\CursoOrientacaoObjetos.dll
+C:\Users\thaly\Study\csharp\POO-Csharp\obj\Debug\net8.0\CursoOrientacaoObjetos.pdb

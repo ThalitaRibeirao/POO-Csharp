@@ -12,13 +12,22 @@
     public bool Available { get; set; }
     public List<Gender> genders = new List<Gender>();
 
+    public string Owner
+    {
+        get
+        {
+            if (Artist.Length == 0) return band.Name;
+            else return Artist;
+        }
+    }
+
     // Only-read propertie (lambda function)
-    public string Description => $"The song {Title} belongs to {Artist}";
+    public string Description => $"The song {Title} belongs to {Owner}";
 
     public void ShowInfo(bool shortInfo=false)
     {
         Console.WriteLine($"Title: {Title}");
-        Console.WriteLine($"Artist: {Artist}");
+        Console.WriteLine($"Artist/Band: {Owner}");
         if (!shortInfo)
         {
             Console.WriteLine($"Album: {Album}");
